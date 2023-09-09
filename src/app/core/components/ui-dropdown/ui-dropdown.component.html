@@ -1,0 +1,194 @@
+<!-- Hero Start -->
+<section class="bg-half-170 bg-light d-table w-100" id="home">
+    <div class="container">
+        <div class="row mt-5 justify-content-center">
+            <div class="col-lg-12 text-center">
+                <div class="pages-heading">
+                    <h4 class="title mb-0"> Dropdowns </h4>
+                </div>
+            </div> <!--end col-->
+        </div><!--end row-->
+
+        <div class="position-breadcrumb">
+            <nav aria-label="breadcrumb" class="d-inline-block">
+                <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
+                    <li class="breadcrumb-item"><a routerLink="/index">Landrick</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Components</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Dropdowns</li>
+                </ul>
+            </nav>
+        </div>
+    </div> <!--end container-->
+</section><!--end section-->
+<!-- Hero End -->
+
+<!-- Shape Start -->
+<div class="position-relative">
+    <div class="shape overflow-hidden text-color-white">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+<!--Shape End-->
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 d-md-block d-none">
+                <app-component-sidebar></app-component-sidebar>
+            </div>
+
+                <!-- Dropdown Start -->
+                <div class="col mt-4 pt-2" id="dropdowns">
+                    <div class="component-wrapper rounded shadow">
+                      <div class="p-4 border-bottom">
+                        <h4 class="title mb-0"> Dropdown </h4>
+                      </div>
+        
+                      <div class="p-4">
+                        <h6 class="text-muted mb-2 pb-2">Ex. <br>
+                          <code class="text-danger">
+                            &lt;div class="btn-group dropdown-primary" ngbDropdown&gt;<br>&nbsp;&nbsp;
+                            &lt;button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                            ngbDropdownToggle
+                            aria-haspopup="true" aria-expanded="false"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            Primary<br>&nbsp;&nbsp;
+                            &lt;/button&gt;<br>&nbsp;&nbsp;
+                            &lt;div class="dropdown-menu" ngbDropdownMenu&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            &lt;a class="dropdown-item" href="javascript:void(0)"&gt;Home&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            &lt;a class="dropdown-item" href="javascript:void(0)"&gt;Services&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            &lt;a class="dropdown-item" href="javascript:void(0)"&gt;About us&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            &lt;div class="dropdown-divider"&gt;&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            &lt;a class="dropdown-item" href="javascript:void(0)"&gt;Contact us&lt;/a&gt;<br>&nbsp;&nbsp;
+                            &lt;/div&gt;<br>
+                            &lt;/div&gt;
+                          </code>
+                        </h6>
+        
+                       <!-- Primary Dropdown -->
+                       <div class="btn-group dropdown-primary me-2 mt-2" ngbDropdown>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                          ngbDropdownToggle aria-haspopup="true" aria-expanded="false">
+                          Primary
+                        </button>
+                        <div class="dropdown-menu" ngbDropdownMenu>
+                          <a href="javascript:void(0)" class="dropdown-item">Home</a>
+                          <a href="javascript:void(0)" class="dropdown-item">Services</a>
+                          <a href="javascript:void(0)" class="dropdown-item">About us</a>
+                          <div class="dropdown-divider"></div>
+                          <a href="javascript:void(0)" class="dropdown-item">Contact us</a>
+                        </div>
+                      </div>
+                      <!-- Primary Dropdown -->
+        
+                      <!-- Secondary Dropdown -->
+                      <div class="btn-group dropdown-secondary me-2 mt-2" ngbDropdown>
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                          ngbDropdownToggle aria-haspopup="true" aria-expanded="false">
+                          Secondary
+                        </button>
+                        <div class="dropdown-menu" ngbDropdownMenu>
+                          <a href="javascript:void(0)" class="dropdown-item">Home</a>
+                          <a href="javascript:void(0)" class="dropdown-item">Services</a>
+                          <a href="javascript:void(0)" class="dropdown-item">About us</a>
+                          <div class="dropdown-divider"></div>
+                          <a href="javascript:void(0)" class="dropdown-item">Contact us</a>
+                        </div>
+                      </div>
+                      <!-- Secondary Dropdown -->
+        
+                      <!-- Success Dropdown -->
+                      <div class="btn-group dropdown-success me-2 mt-2" ngbDropdown>
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+                          Success
+                        </button>
+                        <div class="dropdown-menu" ngbDropdownMenu>
+                          <a href="javascript:void(0)" class="dropdown-item">Home</a>
+                          <a href="javascript:void(0)" class="dropdown-item">Services</a>
+                          <a href="javascript:void(0)" class="dropdown-item">About us</a>
+                          <div class="dropdown-divider"></div>
+                          <a href="javascript:void(0)" class="dropdown-item">Contact us</a>
+                        </div>
+                      </div>
+                      <!-- Success Dropdown -->
+        
+                      <!-- Warning Dropdown -->
+                      <div class="btn-group dropdown-warning me-2 mt-2" ngbDropdown>
+                        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+                          Warning
+                        </button>
+                        <div class="dropdown-menu" ngbDropdownMenu>
+                          <a href="javascript:void(0)" class="dropdown-item">Home</a>
+                          <a href="javascript:void(0)" class="dropdown-item">Services</a>
+                          <a href="javascript:void(0)" class="dropdown-item">About us</a>
+                          <div class="dropdown-divider"></div>
+                          <a href="javascript:void(0)" class="dropdown-item">Contact us</a>
+                        </div>
+                      </div>
+                      <!-- Warning Dropdown -->
+        
+                      <!-- Info Dropdown -->
+                      <div class="btn-group dropdown-info me-2 mt-2" ngbDropdown>
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+                          Info
+                        </button>
+                        <div class="dropdown-menu" ngbDropdownMenu>
+                          <a href="javascript:void(0)" class="dropdown-item">Home</a>
+                          <a href="javascript:void(0)" class="dropdown-item">Services</a>
+                          <a href="javascript:void(0)" class="dropdown-item">About us</a>
+                          <div class="dropdown-divider"></div>
+                          <a href="javascript:void(0)" class="dropdown-item">Contact us</a>
+                        </div>
+                      </div>
+                      <!-- Info Dropdown -->
+        
+                      <!-- Danger Dropdown -->
+                      <div class="btn-group dropdown-danger me-2 mt-2" ngbDropdown>
+                        <button type="button" class="btn btn-danger dropdown-toggle" ngbDropdownToggle data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false">
+                          Danger
+                        </button>
+                        <div class="dropdown-menu" ngbDropdownMenu>
+                          <a href="javascript:void(0)" class="dropdown-item">Home</a>
+                          <a href="javascript:void(0)" class="dropdown-item">Services</a>
+                          <a href="javascript:void(0)" class="dropdown-item">About us</a>
+                          <div class="dropdown-divider"></div>
+                          <a href="javascript:void(0)" class="dropdown-item">Contact us</a>
+                        </div>
+                      </div>
+                      <!-- Danger Dropdown -->
+        
+                      <!-- Dark Dropdown -->
+                      <div class="btn-group dropdown-dark me-2 mt-2" ngbDropdown>
+                        <button type="button" class="btn btn-dark dropdown-toggle" ngbDropdownToggle data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false">
+                          Dark
+                        </button>
+                        <div class="dropdown-menu" ngbDropdownMenu>
+                          <a href="javascript:void(0)" class="dropdown-item">Home</a>
+                          <a href="javascript:void(0)" class="dropdown-item">Services</a>
+                          <a href="javascript:void(0)" class="dropdown-item">About us</a>
+                          <div class="dropdown-divider"></div>
+                          <a href="javascript:void(0)" class="dropdown-item">Contact us</a>
+                        </div>
+                      </div>
+                      <!-- Dark Dropdown -->
+                    </div>
+                    </div>
+                  </div>
+                  <!--end col-->
+                  <!-- Dropdown End -->
+        </div>
+    </div>
+</section>
+
+<!-- Back to top -->
+<a href="javascript: void(0);" class="btn btn-icon btn-primary back-to-top" id="back-to-top" [ngxScrollTo]="'#home'">
+  <i-feather name="arrow-up" class="icons"></i-feather>
+</a>
+<!-- Back to top -->
+

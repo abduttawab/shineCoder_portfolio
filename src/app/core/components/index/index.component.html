@@ -1,0 +1,362 @@
+<!-- Hero Section -->
+<section class="about-two hero-section" id="home">
+  <div class="auto-container" *ngIf="HomePageInfo != null">
+    <div class="row clearfix">
+      <div class="about-two_content col-lg-6 col-md-12 col-sm-12">
+        <div class="about-two_content-inner">
+          <div class="sec-title_two" [innerHTML]="HomePageInfo.mainHeader"></div>
+          <div [innerHTML]="HomePageInfo.mainHeaderText"></div>
+          
+          <div class="d-flex flex-wrap">
+            <a class="btn-style-three theme-btn btn-item" routerLink="/page-contact-two">
+              <div class="btn-wrap">
+                <span class="text-one">Get Started <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+                <span class="text-two">Get Started <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+              </div>
+            </a>
+            <a class="btn-style-three theme-btn btn-item" routerLink="/auth-signup">
+              <div class="btn-wrap">
+                <span class="text-one">Sign Up <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+                <span class="text-two">Sign Up <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+              </div>
+            </a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <div class="about-two_image-column col-lg-6 col-md-12 col-sm-12">
+        <div class="about-two_pattern-two pattern13-background"></div>
+        <div class="about-two_image">
+          <img src="{{HomePageInfo.sectionOneImage}}" alt="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Hero section end -->
+
+<section class="section-margin">
+  <div class="container">
+  <div class="row clearfix">
+    <!-- Image Column -->
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <app-clients-logo brand_class="col-lg-2 col-md-2 col-6 text-center py-4"></app-clients-logo>
+    </div>
+    <!-- Content Column -->
+    <div class="choose-one_content-column col-lg-6 col-md-12 col-sm-12">
+      <div  [innerHTML]="HomePageInfo.sectionOneHeader">
+        <div class="choose-one_text" [innerHTML]="HomePageInfo.sectionOneText"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- About One -->
+<section class="section-margin">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!-- Content Column -->
+      <div class="about-one_content col-lg-6 col-md-12 col-sm-12">
+        <div class="about-one_content-inner">
+          <div class="sec-title">
+            <div [innerHTML]="HomePageInfo.sectionTwoHeader"></div>
+            <div [innerHTML]="HomePageInfo.sectionTwoText"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Image Column -->
+      <div class="about-one_image-column-two col-lg-6 col-md-12 col-sm-12">
+        <div>
+          <div class="about-one_image-two">
+            <!-- Counter Column -->
+            <div class="about-one_counter-block">
+              <div class="about-one_counter-number"><span class="odometer" data-count="12"></span></div>
+              <div class="about-one_counter-text">years of <br> experiences</div>
+            </div>
+            <img src="{{HomePageInfo.sectionTwoImage}}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End About One -->
+
+<!-- Services One -->
+<section class="services-one">
+  <div class="services-one_pattern-layer" style="background-image:url(assets/images/shineimages/pattern-14.png)"></div>
+  <div class="auto-container">
+    
+    <!-- Sec Title -->
+    <div class="sec-title_two centered">
+      <div class="choose-one_title">~ Our Awesome Services ~</div>
+      <h2 class="sec-title_two-heading">Choose <span>The Best</span> IT <br> Service Company</h2>
+    </div>
+    
+    <div class="services-one_inner-coontainer">
+      <div class="row">
+       
+        <!-- Service Block One -->
+        <div class="service-block_three col-md-3">
+          <div class="service-block_three-inner">
+            <span class="service-block_three-icon"><img src="assets/images/shineimages/service-10.png" alt=""></span>
+            <h5 class="service-block_three-heading">UI/UX Design</h5>
+            <div class="service-block_three-text">Our customers get solutions and business opportunities instead of just projects.</div>
+            <div class="service-block_three-overlay">
+              <div class="service-block_three-color-layer"></div>
+              <span class="service-block_three-icon-two"><img src="assets/images/shineimages/service-10-1.png" alt=""></span>
+              <h5 class="service-block_three-heading alternate"><a href="#">UI/UX Design</a></h5>
+              <a class="service-block_three-learn" href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+         <!-- Service Block One -->
+         <div class="service-block_three col-md-3">
+          <div class="service-block_three-inner">
+            <span class="service-block_three-icon"><img src="assets/images/shineimages/service-10.png" alt=""></span>
+            <h5 class="service-block_three-heading">UI/UX Design</h5>
+            <div class="service-block_three-text">Our customers get solutions and business opportunities instead of just projects.</div>
+            <div class="service-block_three-overlay">
+              <div class="service-block_three-color-layer"></div>
+              <span class="service-block_three-icon-two"><img src="assets/images/shineimages/service-10-1.png" alt=""></span>
+              <h5 class="service-block_three-heading alternate"><a href="#">UI/UX Design</a></h5>
+              <a class="service-block_three-learn" href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+         <!-- Service Block One -->
+         <div class="service-block_three col-md-3">
+          <div class="service-block_three-inner">
+            <span class="service-block_three-icon"><img src="assets/images/shineimages/service-10.png" alt=""></span>
+            <h5 class="service-block_three-heading">UI/UX Design</h5>
+            <div class="service-block_three-text">Our customers get solutions and business opportunities instead of just projects.</div>
+            <div class="service-block_three-overlay">
+              <div class="service-block_three-color-layer"></div>
+              <span class="service-block_three-icon-two"><img src="assets/images/shineimages/service-10-1.png" alt=""></span>
+              <h5 class="service-block_three-heading alternate"><a href="#">UI/UX Design</a></h5>
+              <a class="service-block_three-learn" href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+         <!-- Service Block One -->
+         <div class="service-block_three col-md-3">
+          <div class="service-block_three-inner">
+            <span class="service-block_three-icon"><img src="assets/images/shineimages/service-10.png" alt=""></span>
+            <h5 class="service-block_three-heading">UI/UX Design</h5>
+            <div class="service-block_three-text">Our customers get solutions and business opportunities instead of just projects.</div>
+            <div class="service-block_three-overlay">
+              <div class="service-block_three-color-layer"></div>
+              <span class="service-block_three-icon-two"><img src="assets/images/shineimages/service-10-1.png" alt=""></span>
+              <h5 class="service-block_three-heading alternate"><a href="#">UI/UX Design</a></h5>
+              <a class="service-block_three-learn" href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Services One -->
+
+
+<!-- Demo section -->
+<section class="section-margin">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!-- Content Column -->
+      <div class="about-two_image-column col-lg-6 col-md-12 col-sm-12">
+        <div class="about-two_pattern-one pattern13-background" ></div>
+        <div class="about-two_image">
+          <img src="{{HomePageInfo.sectionThreeImage}}" alt="">
+          <!-- About One Detail -->
+          <a class="about-two_play  fa-solid fa-play fa-fw" href="https://www.youtube.com/watch?v=kxPCFljwJws">
+            <i class="ripple"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Content Column -->
+      <div class="about-two_content col-lg-6 col-md-12 col-sm-12">
+       
+        <div class="about-two_content-inner">
+            <div class="sec-title_two" [innerHTML]="HomePageInfo.sectionThreeHeader"></div>
+            <div class="about-two_text" [innerHTML]="HomePageInfo.sectionThreeText"></div>
+
+              
+          <div class="d-flex flex-wrap about-two_feature">
+            <a class="btn-style-three theme-btn btn-item" routerLink="/auth-signup">
+              <div class="btn-wrap">
+                <span class="text-one">Sign Up For Demo <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+                <span class="text-two">Sign Up For Demo <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+              </div>
+            </a>
+            
+            <!-- About Phone Box -->
+            <div class="about-phone_box">
+              <span class="about-phone_icon fa-solid fa-phone fa-fw"></span>
+              Call for help <br>
+              <a class="about-two_phone-number" href="tel:+91-124-3467-2345">91 124 3467 2345</a>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-- End demo section -->
+
+	
+	<!-- Counter One -->
+	<section class="counter-one">
+		<div class="auto-container">
+			<div class="counter-one_inner-container" style="background-image:url(assets/images/shineimages/1.jpg)">
+				<div class="row clearfix">
+					
+					<!-- Counter Column -->
+					<div class="counter-one_block col-lg-3 col-md-6 col-sm-6">
+						<div class="counter-one_inner">
+							<span class="counter-one_icon fa-solid fa-user-plus fa-fw"></span>
+							<div class="counter-one_counter"><span class="odometer" data-count="105"></span>+</div>
+							<div class="counter-one_text">Team members</div>
+						</div>
+					</div>
+					
+					<!-- Counter Column -->
+					<div class="counter-one_block col-lg-3 col-md-6 col-sm-6">
+						<div class="counter-one_inner">
+							<span class="counter-one_icon fa-solid fa-award fa-fw"></span>
+							<div class="counter-one_counter"><span class="odometer" data-count="15"></span>+</div>
+							<div class="counter-one_text">Winning awards</div>
+						</div>
+					</div>
+					
+					<!-- Counter Column -->
+					<div class="counter-one_block col-lg-3 col-md-6 col-sm-6">
+						<div class="counter-one_inner">
+							<span class="counter-one_icon fa-regular fa-file fa-fw"></span>
+							<div class="counter-one_counter"><span class="odometer" data-count="10"></span>K+</div>
+							<div class="counter-one_text">Completed project</div>
+						</div>
+					</div>
+					
+					<!-- Counter Column -->
+					<div class="counter-one_block col-lg-3 col-md-6 col-sm-6">
+						<div class="counter-one_inner">
+							<span class="counter-one_icon fa-solid fa-user-tie fa-fw"></span>
+							<div class="counter-one_counter"><span class="odometer" data-count="850"></span>k+</div>
+							<div class="counter-one_text">Client's reviews</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Counter One -->
+	
+	
+	<!-- Faq Section -->
+	<section class="section-margin">
+		<div class="auto-container">
+			<div class="row clearfix">
+				
+				<!-- Carousel Column -->
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<div [innerHTML]="HomePageInfo.sectionFourHeader"></div>
+          <div [innerHTML]="HomePageInfo.sectionFourText"></div>
+          <div class="accordion" id="faqSection">
+	  
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  How our ShinecccCoder work ?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqSection">
+                <div class="accordion-body">
+                  Due to its widespread use as filler text for layouts, non-readability is of great importance: human perception is tuned to recognize certain patterns and repetitions in texts.
+                </div>
+              </div>
+            </div>
+        
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                   What is the main process open account ?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqSection">
+                <div class="accordion-body">
+                  If the distribution of letters and 'words' is random, the reader will not be distracted from making a neutral judgement on the visual impact
+                </div>
+              </div>
+            </div>
+        
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                   How to make unlimited data entry ?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqSection">
+                <div class="accordion-body">
+                 Furthermore, it is advantageous when the dummy text is relatively realistic so that the layout impression of the final publication is not compromised.
+                </div>
+              </div>
+            </div>
+        
+             <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                   What is the main process open account ?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqSection">
+                <div class="accordion-body">
+                  The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin.
+                </div>
+              </div>
+            </div>
+        
+          </div>
+				</div>
+				
+				<!-- Image Column -->
+				<div class="testimonial-three_image-column col-lg-6 col-md-12 col-sm-12">
+					<div class="testimonial-three_image-inner">
+						<div class="testimonial-three_image">
+							<img src="{{HomePageInfo.sectionFourImage}}" alt="">
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- Faq Section -->
+
+  	<!-- CTA Start  -->
+	<section class="cta-one">
+		<div class="auto-container">
+			<div class="d-flex justify-content-between align-items-center flex-wrap">
+				<div class="left-box">
+        <h3 class="cta-one_heading" [innerHTML]="HomePageInfo.sectionFiveHeader"></h3>
+        <div class="cta-one_text" [innerHTML]="HomePageInfo.sectionFiveText"></div>
+				</div>
+				<div class="right-box">
+					<a class="cta-one_btn theme-btn" routerLink="/page-contact-two">get a quote</a>
+				</div>
+			</div>
+		</div>
+	</section>
+  	<!-- CTA end -->

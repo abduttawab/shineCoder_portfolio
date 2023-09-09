@@ -1,0 +1,243 @@
+<header class="main-header header-style-one">
+    	
+	<!-- Header Top -->
+	<div class="header-top">
+		<div class="auto-container">
+			<div class="inner-container d-flex flex-wrap">
+				<!-- Info List -->
+					
+						<!-- Social Box -->
+						<ul class="header-social_box">
+							<li><a href="https://www.twitter.com/" class="fa fa-whatsapp"></a></li>
+							<li><a href="https://www.facebook.com/" class="icon fa-solid fa-phone fa-fw"></a></li>
+							<li><a href="https://www.linkedin.com/" class="icon fa-solid fa-envelope fa-fw"></a></li>
+							<li><a href="https://instagram.com/" class="fa fa-skype"></a></li>
+						</ul>
+			</div>
+		</div>
+	</div>
+	<!-- End Header Top -->
+	
+	<!-- Header Lower -->
+	<div class="header-lower">
+		
+		<div class="auto-container">
+			<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
+				<!-- Logo Box -->
+				<div class="logo"><a routerLink="/index"><img src="assets/images/logo-light.png" alt="" title=""></a></div>
+				
+				
+				<div class="nav-outer d-flex justify-content-between align-items-center flex-wrap">
+					
+					<!-- Main Menu -->
+					<nav class="main-menu show navbar-expand-md">
+						<div class="navbar-header">
+						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						</div>
+						
+						<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+						  <ul *ngIf="menus" class="navigation clearfix" [class]="navClass">
+			
+							<li [ngClass]="{'dropdown': menu.menuCats.length>0}" *ngFor="let menu of menus">
+							  <a [routerLink]="menu.link" (click)="onMenuClick($event)">{{ menu.name }}</a>
+							  <span [ngClass]="{'menu-arrow': menu.menuCats.length>0}"></span>
+							  <ul>
+								<li [ngClass]="{'dropdown': dropdown.link == null}" *ngFor="let dropdown of menu.menuCats">
+								  <a *ngIf="dropdown.link  != null"  routerLink="/inner-page-list" [queryParams]="{innerPageType:menu.name}">{{ dropdown.name }}</a>
+								  <a  *ngIf="dropdown.link  == null " class="nav-link-ref">{{ dropdown.name }}</a>
+								  <ul *ngIf="dropdown.link  == null ">
+									  <li *ngFor="let subCat of dropdown.menuSubCats">
+										<a class="nav-link-ref" routerLink="/inner-page-list" [queryParams]="{innerPageType:menu.name}">{{ subCat.name }}</a>
+									  </li>
+									</ul>
+								</li>
+							  </ul>
+							</li>
+					
+							<li><a routerLink="/inner-page-list" [queryParams]="{innerPageType:'Blog'}" >Blog</a></li>
+					   
+					
+							<li *ngIf="!(LoginStatus$ | async) as LoginStatus"><a routerLink="/auth-login" >Login</a></li>
+					   
+							<li class="dropdown" *ngIf="LoginStatus$ | async as LoginStatus">
+							  <a *ngIf="Username$ | async as UserName" href="javascript:void(0)" (click)="onMenuClick($event)"><img
+								class="img-profile rounded-circle"
+								src=""
+							/>{{ UserName | titlecase }}</a><span class="menu-arrow"></span>
+							
+							  <ul>
+								
+								<!-- <li><a routerLink="/" class="sub-menu-item">Profile </a></li>
+								<li><a routerLink="/" class="sub-menu-item">Settings </a></li> -->
+								<li><a href="javascript:void(0)" (click)="onLogout()" class="sub-menu-item">Logout </a></li>
+							  </ul>
+							</li>
+						  </ul>
+						</div>
+						
+					  </nav>
+					<!-- Main Menu End-->
+					
+					<div class="outer-box d-flex align-items-center">
+						
+						<!-- Mobile Navigation Toggler -->
+						<div class="mobile-nav-toggler"><span class="icon fa-solid fa-bars fa-fw"></span></div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- End Header Lower -->
+	
+	<!-- Sticky Header  -->
+	<div class="sticky-header">
+		<div class="auto-container">
+			<div class="d-flex justify-content-between align-items-center">
+				<!-- Logo -->
+				<div class="logo">
+					<a routerLink="/index" title=""><img src="assets/images/logo-light.png" alt="" title=""></a>
+				</div>
+				
+				<!-- Right Col -->
+				<div class="right-box d-flex align-items-center flex-wrap">
+					<!-- Main Menu -->
+					<nav class="main-menu">
+						<!--Keep This Empty / Menu will come through Javascript-->
+					
+						<div class="navbar-header">
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							  <span class="icon-bar"></span>
+							  <span class="icon-bar"></span>
+							  <span class="icon-bar"></span>
+							</button>
+						  </div>
+						  
+						  <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+							<ul *ngIf="menus" class="navigation clearfix" [class]="navClass">
+			  
+							  <li [ngClass]="{'dropdown': menu.menuCats.length>0}" *ngFor="let menu of menus">
+								<a [routerLink]="menu.link" (click)="onMenuClick($event)">{{ menu.name }}</a>
+								<span [ngClass]="{'menu-arrow': menu.menuCats.length>0}"></span>
+								<ul>
+									<li [ngClass]="{'dropdown': dropdown.link == null}" *ngFor="let dropdown of menu.menuCats">
+									  <a *ngIf="dropdown.link  != null"  routerLink="/inner-page-list" [queryParams]="{innerPageType:menu.name}">{{ dropdown.name }}</a>
+									  <a  *ngIf="dropdown.link  == null " class="nav-link-ref">{{ dropdown.name }}</a>
+									  <ul *ngIf="dropdown.link  == null ">
+										  <li *ngFor="let subCat of dropdown.menuSubCats">
+											<a class="nav-link-ref" routerLink="/inner-page-list" [queryParams]="{innerPageType:menu.name}">{{ subCat.name }}</a>
+										  </li>
+										</ul>
+									</li>
+								  </ul>
+							  </li>
+					  
+							  <li><a routerLink="/inner-page-list" [queryParams]="{innerPageType:'Blog'}" >Blog</a></li>
+						 
+					  
+							  <li *ngIf="!(LoginStatus$ | async) as LoginStatus"><a routerLink="/auth-login" >Login</a></li>
+						 
+							  <li class="dropdown" *ngIf="LoginStatus$ | async as LoginStatus">
+								<a *ngIf="Username$ | async as UserName" href="javascript:void(0)" (click)="onMenuClick($event)"><img
+								  class="img-profile rounded-circle"
+								  src=""
+							  />{{ UserName | titlecase }}</a><span class="menu-arrow"></span>
+							  
+								<ul>
+								  
+								  <!-- <li><a routerLink="/" class="sub-menu-item">Profile </a></li>
+								  <li><a routerLink="/" class="sub-menu-item">Settings </a></li> -->
+								  <li><a href="javascript:void(0)" (click)="onLogout()" class="sub-menu-item">Logout </a></li>
+								</ul>
+							  </li>
+							</ul>
+						  </div>
+						
+					</nav>
+					<!-- Main Menu End-->
+					
+					<div class="outer-box d-flex align-items-center">
+						
+						<!-- Mobile Navigation Toggler -->
+						<div class="mobile-nav-toggler"><span class="icon fa-solid fa-bars fa-fw"></span></div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- End Sticky Menu -->
+	
+	<!-- Mobile Menu  -->
+	<div class="mobile-menu">
+		<div class="menu-backdrop"></div>
+		<div class="close-btn"><span class="icon flaticon-020-x-mark"></span></div>
+		<nav class="menu-box">
+			<div class="nav-logo"><a routerLink="/index"><img src="assets/images/logo-light.png" alt="" title=""></a></div>
+		
+			<div class="menu-outer">
+				<div class="navbar-header">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</button>
+				  </div>
+				  
+				  <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+					<ul *ngIf="menus" class="navigation clearfix" [class]="navClass">
+	  
+					  <li [ngClass]="{'dropdown': menu.menuCats.length>0}" *ngFor="let menu of menus">
+						<a [routerLink]="menu.link" class="nav-link-ref">{{ menu.name }}</a>
+						
+						<ul>
+						  <li *ngFor="let dropdown of menu.menuCats">
+							<a *ngIf="dropdown.link  != null" class="nav-link-ref" routerLink="/inner-page-list" [queryParams]="{innerPageType:menu.name}">{{ dropdown.name }}</a>
+							<a  *ngIf="dropdown.link  == null " class="nav-link-ref">{{ dropdown.name }}</a>
+							<ul>
+								<li *ngFor="let subCat of dropdown.menuSubCats">
+								  <a class="nav-link-ref" routerLink="/inner-page-list" [queryParams]="{innerPageType:menu.name}">{{ subCat.name }}</a>
+								  
+								</li>
+							</ul>
+							<div *ngIf="dropdown.link == null" (click)="onMenuClick($event)" class="dropdown-btn"><span class="fa-solid fa-chevron-down fa-fw"></span></div>
+						  </li>
+						</ul>
+						<div *ngIf="menu.menuCats.length>0" (click)="onMenuClick($event)" class="dropdown-btn"><span class="fa-solid fa-chevron-down fa-fw"></span></div>
+					  </li>
+			  
+					  <li><a routerLink="/inner-page-list" [queryParams]="{innerPageType:'Blog'}" >Blog</a></li>
+				 
+			  
+					  <li *ngIf="!(LoginStatus$ | async) as LoginStatus"><a routerLink="/auth-login" >Login</a></li>
+				 
+					  <li class="dropdown" *ngIf="LoginStatus$ | async as LoginStatus">
+						<a *ngIf="Username$ | async as UserName" href="javascript:void(0)" (click)="onMenuClick($event)"><img
+						  class="img-profile rounded-circle"
+						  src=""
+					  />{{ UserName | titlecase }}</a><span class="menu-arrow"></span>
+					  
+						<ul>
+						  
+						  <!-- <li><a routerLink="/" class="sub-menu-item">Profile </a></li>
+						  <li><a routerLink="/" class="sub-menu-item">Settings </a></li> -->
+						  <li><a href="javascript:void(0)" (click)="onLogout()" class="sub-menu-item">Logout </a></li>
+						</ul>
+					  </li>
+					</ul>
+				  </div>
+						
+					</div>
+		</nav>
+	</div>
+	<!-- End Mobile Menu -->
+
+</header>

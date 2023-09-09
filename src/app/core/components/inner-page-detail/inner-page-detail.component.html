@@ -1,0 +1,65 @@
+	
+	<!-- Page Title -->
+  <section class="page-title services-bg">
+    <div class="auto-container">
+  <h2>{{obj.title}}</h2>
+  <ul class="bread-crumb clearfix">
+    <li><a  routerLink="/">ShineCoder</a></li>
+    <li>{{obj.title}}</li>
+  </ul>
+    </div>
+</section>
+<!-- End Page Title -->
+<!-- Sidebar Page Container -->
+<div class="sidebar-page-container">
+  <div class="auto-container">
+      <div class="row clearfix">
+    
+    <!-- Sidebar Side -->
+ <div class="sidebar-side left-sidebar col-lg-4 col-md-12 col-sm-12">
+  <aside class="sidebar">
+        <!-- Sidebar Widget -->
+        <div class="sidebar-widget category-widget">
+          <ul class="cat-list">
+            <li class="active"><a href="#">UI/UX & Web Design</a></li>
+            <li><a href="#">Cloud Services</a></li>
+            <li><a href="#">Software Development</a></li>
+            <li><a href="#">Social Media Marketing</a></li>
+            <li><a href="#">Delivery Services</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Widget -->
+        <div class="sidebar-widget contact-widget">
+          <div class="widget-content" style="background-image:url(assets/images/shineimages/8.jpg)">
+            <div class="title">Contact us now</div>
+            <div class="help">If need help!</div>
+            <a class="phone" href="tel:+557-3452-234">557-3452-234</a>
+            <div class="form">or go to contact page:</div>
+            <div class="button-box text-center">
+              <a routerLink="/page-contact-two">Let's start now <span class="fa-solid fa-link fa-fw"></span></a>
+            </div>
+          </div>
+        </div>
+        
+      </aside>
+    </div>
+    
+    <!-- Content Side -->
+            <div class="content-side right-sidebar col-lg-8 col-md-12 col-sm-12">
+      <div class="service-detail">
+        <div class="inner-box">
+          <div class="image">
+            <img src="{{obj.image}}" alt="">
+          </div>
+          <h3>{{obj.title}}</h3>
+          <div [innerHTML]="obj.details_1"></div>
+          <div [innerHTML]="obj.details_2"></div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+</div>
+<!-- End Sidebar Page Container -->

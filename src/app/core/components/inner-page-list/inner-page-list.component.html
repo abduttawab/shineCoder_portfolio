@@ -1,0 +1,47 @@
+	<!-- Page Title -->
+    <section class="page-title services-bg">
+        <div class="auto-container">
+			<h2>{{innerPageType}}</h2>
+			<ul class="bread-crumb clearfix">
+				<li><a  routerLink="/">ShineCoder</a></li>
+				<li>{{innerPageType}}</li>
+			</ul>
+        </div>
+    </section>
+    <!-- End Page Title -->
+    <!-- Service Two -->
+	<section class="service-two">
+		<div class="auto-container">
+            <div class="sec-title centered">
+				<div class="sec-title_title">{{obj.title}}</div>
+				<p class="sec-title_heading">{{obj.details}}</p>
+			</div>
+		
+			<div class="row clearfix">
+				
+				<div class="service-block_two col-lg-3 col-md-6 col-sm-12" *ngFor="let data of objList">
+					<div class="service-block_two-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="service-block_two-image">
+							<img src="{{data.image}}" alt="">
+							<div class="service-block_two-overlay">
+								<div class="service-block_two-icon"><img src="assets/images/shineimages/service.png" alt=""></div>
+								<h5 class="service-block_two-title">{{data.title}}</h5>
+							</div>
+							<div class="service-block_two-overlay-two">
+								<div class="service-two_overlay-content">
+									<h5 class="service-block_two-title"><a href="#">{{data.title}}</a></h5>
+									<a class="service-block_two-more"[routerLink]="['/inner-page-detail']" 
+                                    [queryParams]="{innerPageId:data.id}">Read more</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				
+			</div>
+			
+		</div>
+	</section>
+	<!-- End Service Two -->
+	

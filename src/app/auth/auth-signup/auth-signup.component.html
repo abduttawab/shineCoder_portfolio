@@ -1,0 +1,415 @@
+<div class="back-to-home rounded d-none d-sm-block">
+  <a routerLink="/index" class="btn btn-icon btn-soft-primary">
+    <i-feather name="home" class="icons"></i-feather>
+  </a>
+</div>
+
+<!-- Hero Start -->
+<section class="bg-auth-home d-table w-100">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7 col-md-6">
+        <div class="me-lg-5">
+          <img src="assets/images/user/signup.svg" class="img-fluid d-block mx-auto" alt="">
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6">
+        <div class="card shadow rounded border-0">
+          <div class="card-body">
+            <h4 class="card-title text-center">Signup</h4>
+            <form class="login-form mt-4" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label">First name <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="user" class="fea icon-sm icons"></i-feather>
+                      <input formControlName="firstname" type="text" class="form-control ps-5" placeholder="First Name" name="s" required="">
+                    </div>
+                  </div>
+                </div>
+                <!--end col-->
+
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label">Last name <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="user-check" class="fea icon-sm icons"></i-feather>
+                      <input formControlName="lastname" type="text" class="form-control ps-5" placeholder="Last Name" name="s" required="">
+                    </div>
+                  </div>
+                </div>
+                <!--end col-->
+
+                <div class="col-md-12">
+                  <div class="mb-3">
+                    <label class="form-label">Username <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="user" class="fea icon-sm icons"></i-feather>
+                      <input type="text" formControlName="username" class="form-control ps-5" placeholder="Username" name="username" required="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label">Your Email <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="mail" class="fea icon-sm icons"></i-feather>
+                      <input type="email" formControlName="email" class="form-control ps-5" placeholder="Email" name="email" required="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label">Confirm Email <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="mail" class="fea icon-sm icons"></i-feather>
+                      <input type="email" formControlName="confirmEmail" class="form-control ps-5" placeholder="Confirm Email" name="confirmEmail" required="">
+                    </div>
+                  </div>
+                </div>
+                <!--end col-->
+
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label">Password <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="key" class="fea icon-sm icons"></i-feather>
+                      <input type="password" formControlName="password" class="form-control ps-5" placeholder="Password" required="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="key" class="fea icon-sm icons"></i-feather>
+                      <input type="password" formControlName="cpassword" class="form-control ps-5" placeholder="Confirm Password" required="">
+                    </div>
+                  </div>
+                </div>
+                <!--end col-->
+
+               
+
+                  <!--end col-->
+
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label class="form-label">Country <span class="text-danger">*</span></label>
+                      <div class="form-icon position-relative">
+                        <select
+                        id="inputState"
+                        class="form-select form-control" 
+                        formControlName="country"
+                    >
+                        <option selected value="" disabled
+                            >Select Country</option
+                        >
+                        <option
+                            *ngFor="let country of countries"
+                            [ngValue]="country.twoDigitCode"
+                            >{{ country.name }}</option
+                        >
+                    </select>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label class="form-label">Phone Number <span class="text-danger">*</span></label>
+                      <div class="form-icon position-relative">
+                        <i-feather name="phone" class="fea icon-sm icons"></i-feather>
+                        <input type="text" formControlName="phone" class="form-control ps-5" placeholder="Phone Number" required="">
+                      </div>
+                    </div>
+                  </div>
+                  <!--end col-->
+
+                  <div class="col-md-5" id="gender">
+                    <fieldset>
+                        <div
+                            class="form-check form-check-inline ml-2"
+                        >
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="gender"
+                                id="maleRadio"
+                                value="male"
+                                formControlName="gender"
+                            />
+                            <label
+                                class="form-check-label"
+                                for="maleRadio"
+                                >Male</label
+                            >
+                        </div>
+                        <div
+                            class="form-check form-check-inline ml-2"
+                        >
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="gender"
+                                id="femaleRadio"
+                                value="female"
+                                formControlName="gender"
+                            />
+                            <label
+                                class="form-check-label"
+                                for="femaleRadio"
+                                >Female</label
+                            >
+                        </div>
+                        <div
+                            class="form-check form-check-inline ml-2"
+                        >
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="gender"
+                                id="otherRadio"
+                                value="other"
+                                formControlName="gender"
+                            />
+                            <label
+                                class="form-check-label"
+                                for="otherRadio"
+                                >Other</label
+                            >
+                        </div>
+                    </fieldset>
+                </div>
+             
+
+
+
+
+
+                <div class="row">
+                  <div class="col-md-8">
+                      <div
+                          *ngIf="username.touched && username.errors"
+                          class="errorMessage"
+                      >
+                          <span *ngIf="username.hasError('required')"
+                              >Username is required.</span
+                          >
+                          <span *ngIf="username.hasError('maxlength')"
+                              >Only 10 characters allowed for
+                              Username.</span
+                          >
+                          <span *ngIf="username.hasError('minlength')"
+                              >Atleast 5 characters needed for
+                              Username.</span
+                          >
+                      </div>
+                      <div
+                          *ngIf="firstname.touched && firstname.errors"
+                          class="errorMessage"
+                      >
+                          <span *ngIf="firstname.hasError('required')"
+                              >Firstname is required.</span
+                          >
+                          <span *ngIf="firstname.hasError('maxlength')"
+                              >Only 10 characters allowed for
+                              Firstname.</span
+                          >
+                          <span *ngIf="firstname.hasError('minlength')"
+                              >Atleast 5 characters needed for
+                              Firstname.</span
+                          >
+                      </div>
+                      <div
+                          *ngIf="lastname.touched && lastname.errors"
+                          class="errorMessage"
+                      >
+                          <span *ngIf="lastname.hasError('required')"
+                              >Lastname is required.</span
+                          >
+                          <span *ngIf="lastname.hasError('maxlength')"
+                              >Only 10 characters allowed for
+                              Lastname.</span
+                          >
+                          <span *ngIf="lastname.hasError('minlength')"
+                              >Atleast 5 characters needed for
+                              Lastname.</span
+                          >
+                      </div>
+                      <div
+                          *ngIf="email.touched && email.errors"
+                          class="errorMessage"
+                      >
+                          <span *ngIf="email.hasError('required')"
+                              >Email is required.</span
+                          >
+                          <span *ngIf="email.hasError('email')"
+                              >Please provide valid email.</span
+                          >
+                      </div>
+                      <div
+                          *ngIf="
+                              confirmEmail.touched && confirmEmail.errors
+                          "
+                          class="errorMessage"
+                      >
+                          <span *ngIf="confirmEmail.hasError('required')"
+                              >Confirm Email is required.</span
+                          >
+                          <span *ngIf="confirmEmail.hasError('mustMatch')"
+                              >Confirm Email must match.</span
+                          >
+                      </div>
+                      <div
+                          *ngIf="password.touched && password.errors"
+                          class="errorMessage"
+                      >
+                          <span *ngIf="password.hasError('required')"
+                              >Password is required.</span
+                          >
+                          <span *ngIf="password.hasError('maxlength')"
+                              >Only 10 characters allowed for
+                              password.</span
+                          >
+                          <span *ngIf="password.hasError('minlength')"
+                              >Atleast 5 characters needed for
+                              password.</span
+                          >
+                      </div>
+                      <div
+                          *ngIf="cpassword.touched && cpassword.errors"
+                          class="errorMessage"
+                      >
+                          <span *ngIf="cpassword.hasError('required')"
+                              >Confirm Password is required.</span
+                          >
+                          <span *ngIf="cpassword.hasError('mustMatch')"
+                              >Confirm Password Must Match.</span
+                          >
+                      </div>
+                      <div
+                          *ngIf="country.touched && country.errors"
+                          class="errorMessage"
+                      >
+                          <span *ngIf="country.hasError('required')"
+                              >Country is required.</span
+                          >
+                      </div>
+                      <div
+                          *ngIf="phone.touched && phone.errors"
+                          class="errorMessage"
+                      >
+                          <span *ngIf="phone.hasError('required')"
+                              >Phone number is required.</span
+                          >
+                          <span *ngIf="phone.hasError('pattern')"
+                              >Valid Phone number is required.</span
+                          >
+                      </div>
+                      <div
+                          *ngIf="gender.touched && gender.errors"
+                          class="errorMessage"
+                      >
+                          <span *ngIf="gender.hasError('required')"
+                              >Gender is required.</span
+                          >
+                      </div>
+                   
+                      <div
+                          *ngIf="terms.touched && terms.errors"
+                          class="errorMessage"
+                      >
+                          <span *ngIf="terms.hasError('required')"
+                              >Review and accept terms and
+                              conditions.</span
+                          >
+                      </div>
+                  </div>
+              </div>
+
+                <div class="col-md-12">
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" formControlName="terms" >
+                      <label class="form-check-label" for="flexCheckDefault">I Accept <a routerLink="/auth-signup"
+                          class="text-primary">Terms And Condition</a></label>
+                    </div>
+                  </div>
+                </div>
+                <!--end col-->
+
+                <div class="col-md-12">
+                  <div class="d-grid">
+                    <button class="btn btn-primary">Register</button>
+                  </div>
+                </div>
+                <!--end col-->
+
+                <!-- <div class="col-lg-12 mt-4 text-center">
+                  <h6>Or Signup With</h6>
+                  <div class="row">
+                    <div class="col-6 mt-3">
+                      <div class="d-grid">
+                        <a href="javascript:void(0)" class="btn btn-light"><i class="mdi mdi-facebook text-primary"></i>
+                          Facebook</a>
+                      </div>
+                    </div>
+
+                    <div class="col-6 mt-3">
+                      <div class="d-grid">
+                        <a href="javascript:void(0)" class="btn btn-light"><i class="mdi mdi-google text-danger"></i>
+                          Google</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                <!--end col-->
+
+                <div class="mx-auto">
+                  <p class="mb-0 mt-3"><small class="text-dark me-2">Already have an account ?</small> <a
+                      routerLink="/auth-login" class="text-dark fw-bold">Sign in</a></p>
+                </div>
+              </div>
+              <!--end row-->
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+    <!--end row-->
+  </div>
+  <!--end container-->
+</section>
+<!--end section-->
+<!-- Hero End -->
+
+<!-- MODAL FOR REGISTRATION ERRORS -->
+<div class="modal" id="errorModal" role="dialog">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title pull-left">{{ modalTitle }}</h4>
+              <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+              >
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body text-center">
+              <p class="list-group-item active">{{ modalMessage }}</p>
+              <ul class="list-group" *ngFor="let error of errorList">
+                  <li class="list-group-item">{{ error }}</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,142 @@
+<!-- Start Style switcher -->
+<!-- <div id="style-switcher" style="left: 0px;" class="bg-light border p-3 pt-2 pb-2"
+    [style]="isVisible ? 'left: 0px' : 'left: -189px' ">
+    <div>
+        <h6 class="title text-center">Select Your Color</h6>
+        <ul class="pattern">
+            <li class="list-inline-item">
+                <a class="color1" href="javascript: void(0);" (click)="onChangeColor('default')"></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="color2" href="javascript: void(0);" (click)="onChangeColor('green')"></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="color3" href="javascript: void(0);" (click)="onChangeColor('purple')"></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="color4" href="javascript: void(0);" (click)="onChangeColor('red')"></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="color5" href="javascript: void(0);" (click)="onChangeColor('skyblue')"></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="color6" href="javascript: void(0);" (click)="onChangeColor('skobleoff')"></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="color7" href="javascript: void(0);" (click)="onChangeColor('cyan')"></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="color8" href="javascript: void(0);" (click)="onChangeColor('slateblue')"></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="color9" href="javascript: void(0);" (click)="onChangeColor('yellow')"></a>
+            </li>
+        </ul>
+
+        <h6 class="title text-center pt-3 mb-0 border-top">Theme Option</h6>
+        <ul class="text-center list-unstyled mb-0">
+            <li class="d-grid"><a href="javascript:void(0)"
+                    class="btn btn-sm btn-block btn-primary rtl-version t-rtl-light mt-2" (click)="setRtl()">RTL</a>
+            </li>
+            <li class="d-grid"><a href="javascript:void(0)"
+                    class="btn btn-sm btn-block btn-primary ltr-version t-ltr-light mt-2" (click)="setLtr()">LTR</a>
+            </li>
+            <li class="d-grid"><a href="javascript:void(0)"
+                    class="btn btn-sm btn-block btn-primary dark-rtl-version t-rtl-dark mt-2"
+                    (click)="darkRtl()">RTL</a></li>
+            <li class="d-grid"><a href="javascript:void(0)"
+                    class="btn btn-sm btn-block btn-primary dark-ltr-version t-ltr-dark mt-2"
+                    (click)="darkLtr()">LTR</a></li>
+            <li class="d-grid"><a href="javascript:void(0)"
+                    class="btn btn-sm btn-block btn-dark dark-version t-dark mt-2" (click)="setDark()">Dark</a></li>
+            <li class="d-grid"><a href="javascript:void(0)"
+                    class="btn btn-sm btn-block btn-dark light-version t-light mt-2" (click)="setLight()">Light</a></li>
+        </ul>
+    </div>
+    <div class="bottom">
+        <a href="javascript: void(0);" class="settings bg-white title-bg-dark shadow d-block"
+            (click)="onChangeSwitch()"><i
+                class="mdi mdi-cog ms-1 mdi-24px position-absolute mdi-spin text-primary"></i></a>
+    </div>
+</div> -->
+<!-- End Style switcher -->
+
+<!-- Switcher Start -->
+<a href="javascript:void(0)" class="switcher-btn shadow-md text-primary bg-white" data-bs-toggle="offcanvas"
+    data-bs-target="#switcher-sidebar" aria-controls="offcanvasLeft" (click)="openLeft(content)">
+    <i class="mdi mdi-cog mdi-24px mdi-spin align-middle"></i>
+</a>
+
+<ng-template #content let-offcanvas>
+    <div class="offcanvas-header p-4 border-bottom">
+        <h5 id="offcanvasLeftLabel" class="mb-0">
+            <img src="assets/images/logo-dark.png" height="24" class="light-version" alt="">
+            <img src="assets/images/logo-light.png" height="24" class="dark-version" alt="">
+        </h5>
+        <button type="button" class="btn-close d-flex align-items-center text-dark" data-bs-dismiss="offcanvas"
+            aria-label="Close" (click)="offcanvas.dismiss('Cross click')"><i class="uil uil-times fs-4"></i></button>
+    </div>
+    <div class="offcanvas-body p-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <h6 class="fw-bold">Theme Options</h6>
+
+                    <ul class="text-center style-switcher list-unstyled mt-4">
+                        <li class="d-grid"><a href="javascript:void(0)" class="rtl-version t-rtl-light"
+                                (click)="setRtl('style-rtl')"><img src="assets/images/demos/rtl.png"
+                                    class="img-fluid rounded-md shadow-md d-block mx-auto" style="width: 270px;"
+                                    alt=""><span class="text-dark fw-medium mt-3 d-block">RTL Version</span></a></li>
+                        <li class="d-grid"><a href="javascript:void(0)" class="ltr-version t-ltr-light"
+                                (click)="setLtr('style')"><img src="assets/images/demos/ltr.png"
+                                    class="img-fluid rounded-md shadow-md d-block mx-auto" style="width: 270px;"
+                                    alt=""><span class="text-dark fw-medium mt-3 d-block">LTR Version</span></a></li>
+                        <li class="d-grid"><a href="javascript:void(0)" class="dark-rtl-version t-rtl-dark"
+                                (click)="darkRtl('style-dark-rtl')"><img src="assets/images/demos/dark-rtl.png"
+                                    class="img-fluid rounded-md shadow-md d-block mx-auto" style="width: 270px;"
+                                    alt=""><span class="text-dark fw-medium mt-3 d-block">RTL Version</span></a></li>
+                        <li class="d-grid"><a href="javascript:void(0)" class="dark-ltr-version t-ltr-dark"
+                                (click)="darkLtr('style-dark')"><img src="assets/images/demos/dark.png"
+                                    class="img-fluid rounded-md shadow-md d-block mx-auto" style="width: 270px;"
+                                    alt=""><span class="text-dark fw-medium mt-3 d-block">LTR Version</span></a></li>
+                        <li class="d-grid"><a href="javascript:void(0)" class="dark-version t-dark mt-4"
+                                (click)="darkLtr('style-dark')"><img src="assets/images/demos/dark.png"
+                                    class="img-fluid rounded-md shadow-md d-block mx-auto" style="width: 270px;"
+                                    alt=""><span class="text-dark fw-medium mt-3 d-block">Dark Version</span></a></li>
+                        <li class="d-grid"><a href="javascript:void(0)" class="light-version t-light mt-4"
+                                (click)="lightLtr('style-dark')"><img src="assets/images/demos/ltr.png"
+                                    class="img-fluid rounded-md shadow-md d-block mx-auto" style="width: 270px;"
+                                    alt=""><span class="text-dark fw-medium mt-3 d-block">Light Version</span></a></li>
+                       
+                        <li class="d-grid"><a href="../../dashboard/dist/index.html" target="_blank" class="mt-4"><img
+                                    src="assets/images/demos/admin.png"
+                                    class="img-fluid rounded-md shadow-md d-block mx-auto" style="width: 270px;"
+                                    alt=""><span class="text-dark fw-medium mt-3 d-block">Landing</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas-footer p-4 border-top text-center">
+        <ul class="list-unstyled social-icon social mb-0 d-flex justify-content-center gap-1">
+            <li class="list-inline-item mb-0"><a href="https://1.envato.market/landrick" target="_blank"
+                    class="rounded"><i class="uil uil-shopping-cart align-middle" title="Buy Now"></i></a></li>
+            <li class="list-inline-item mb-0"><a href="https://dribbble.com/shreethemes" target="_blank"
+                    class="rounded"><i class="uil uil-dribbble align-middle" title="dribbble"></i></a></li>
+            <li class="list-inline-item mb-0"><a href="https://www.behance.net/shreethemes" target="_blank"
+                    class="rounded"><i class="uil uil-behance align-middle" title="behance"></i></a></li>
+            <li class="list-inline-item mb-0"><a href="https://www.facebook.com/shreethemes" target="_blank"
+                    class="rounded"><i class="uil uil-facebook-f align-middle" title="facebook"></i></a></li>
+            <li class="list-inline-item mb-0"><a href="https://www.instagram.com/shreethemes/" target="_blank"
+                    class="rounded"><i class="uil uil-instagram align-middle" title="instagram"></i></a></li>
+            <li class="list-inline-item mb-0"><a href="https://twitter.com/shreethemes" target="_blank"
+                    class="rounded"><i class="uil uil-twitter align-middle" title="twitter"></i></a></li>
+            <li class="list-inline-item mb-0"><a href="mailto:support@shreethemes.in" class="rounded"><i
+                        class="uil uil-envelope align-middle" title="email"></i></a></li>
+            <li class="list-inline-item mb-0"><a href="https://shreethemes.in" target="_blank" class="rounded"><i
+                        class="uil uil-globe align-middle" title="website"></i></a></li>
+        </ul>
+    </div>
+</ng-template>
+<!-- Switcher End -->

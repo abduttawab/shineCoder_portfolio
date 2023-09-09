@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { UiTextComponent } from './ui-text.component';
+
+describe('UiTextComponent', () => {
+  let component: UiTextComponent;
+  let fixture: ComponentFixture<UiTextComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ UiTextComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(UiTextComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

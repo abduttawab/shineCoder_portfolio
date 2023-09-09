@@ -1,0 +1,146 @@
+	<!-- Page Title -->
+  <section class="page-title services-bg">
+  <div class="auto-container">
+  <h2>Contact Us</h2>
+  <ul class="bread-crumb clearfix">
+    <li><a  routerLink="/">ShineCoder</a></li>
+    <li>Contact Us</li>
+  </ul>
+    </div>
+</section>
+<!-- End Page Title -->
+<!-- Contact One -->
+<section class="contact-one" style="background-image:url(assets/images/shineimages/map-1.png)">
+  <div class="auto-container">
+    <!-- Sec Title -->
+    <div class="sec-title">
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div class="left-box">
+          <div class="choose-one_title">Contact us</div>
+          <h2 class="sec-title_heading">Grow Your Business With <br> <span>Our Expertise</span></h2>
+        </div>
+        <div class="right-box">
+          <div class="sec-title_text">Start working with ShineCoder that can provide everything you need <br>to generate awareness, drive traffic, connect.</div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+    
+      <!-- Info Column -->
+      <div class="info-column col-lg-4 col-md-12 col-sm-12">
+        <div class="inner-column">
+          
+          <!-- Contact Block -->
+          <div class="contact-block">
+            <div class="block-inner">
+              <span class="icon"><img src="assets/images/shineimages/contact-1.png" alt=""></span>
+              <strong>Office address</strong>
+              7th Cross St Udhaygiri, Nehru Nagar Mandya, Karnataka 571401 India
+            </div>
+          </div>
+          
+          <!-- Contact Block -->
+          <div class="contact-block">
+            <div class="block-inner">
+              <span class="icon"><img src="assets/images/shineimages/contact-2.png" alt=""></span>
+              <strong>Telephone number</strong>
+              {{obj.phone}}
+            </div>
+          </div>
+          
+          <!-- Contact Block -->
+          <div class="contact-block">
+            <div class="block-inner">
+              <span class="icon"><img src="assets/images/shineimages/contact-3.png" alt=""></span>
+              <strong>Mail address</strong>
+              {{obj.email}}
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- Form Column -->
+      <div class="form-column col-lg-8 col-md-12 col-sm-12">
+        <div class="inner-column">
+          
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <form method="post" name="myForm" onsubmit="return validateForm()">
+              <p id="error-msg" class="mb-0"></p>
+              <div id="simple-msg"></div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label">Your Name <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="user" class="fea icon-sm icons"></i-feather>
+                      <input name="name" id="name" type="text" class="form-control ps-5" placeholder="Name :">
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label">Your Email <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="mail" class="fea icon-sm icons"></i-feather>
+                      <input name="email" id="email" type="email" class="form-control ps-5" placeholder="Email :">
+                    </div>
+                  </div>
+                </div>
+                <!--end col-->
+  
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label class="form-label">Subject</label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="book" class="fea icon-sm icons"></i-feather>
+                      <input name="subject" id="subject" class="form-control ps-5" placeholder="subject :">
+                    </div>
+                  </div>
+                </div>
+                <!--end col-->
+  
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label class="form-label">Comments <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="message-circle" class="fea icon-sm icons clearfix"></i-feather>
+                      <textarea name="comments" id="comments" rows="4" class="form-control ps-5"
+                        placeholder="Message :"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="d-grid">
+                    <button type="submit" id="submit" name="send" class="btn btn-primary">Send Message</button>
+                  </div>
+                </div>
+                <!--end col-->
+              </div>
+              <!--end row-->
+            </form>
+  
+          </div>
+          <!-- End Comment Form -->
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-- End Contact One -->
+
+<!-- Map One -->
+<section class="map-one">
+  <div class="map-outer">
+    <iframe
+    [src]= "sanitizer.bypassSecurityTrustResourceUrl(obj.addressMap)"
+      style="border:0" allowfullscreen></iframe>
+  </div>
+</section>
+<!-- End Map One -->
